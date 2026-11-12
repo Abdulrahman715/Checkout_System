@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment/core/widgets/custom_button.dart';
 import 'package:payment/features/item/presentation/views/widgets/cart_item_info.dart';
+import 'package:payment/features/visa/presentation/views/visa_view.dart';
 
 class ItemViewBody extends StatelessWidget {
   const ItemViewBody({super.key});
@@ -27,7 +28,15 @@ class ItemViewBody extends StatelessWidget {
           Divider(height: 40.0, thickness: 1.0),
           CartItemInfo(title: 'Total', value: '\$ 160.00'),
           SizedBox(height: 40.0),
-          CustomButton(text: 'Complete Payment', onPressed: () {}),
+          CustomButton(
+            text: 'Complete Payment',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const VisaView()),
+              );
+            },
+          ),
           SizedBox(height: 20.0),
         ],
       ),

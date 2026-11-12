@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment/features/item/presentation/views/widgets/cart_app_bar.dart';
+import 'package:payment/core/widgets/custom_app_bar.dart';
 import 'package:payment/features/item/presentation/views/widgets/item_view_body.dart';
 
 class ItemView extends StatelessWidget {
@@ -9,7 +9,7 @@ class ItemView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CartAppBar(),
+        appBar: CustomAppBar(title: 'Item'),
         body: ItemViewBody(),
       ),
     );
