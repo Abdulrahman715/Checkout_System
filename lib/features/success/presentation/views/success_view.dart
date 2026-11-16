@@ -7,11 +7,14 @@ class SuccessView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(title: ''),
-      body: SafeArea(
-        child: SuccessViewBody(),
+    return Scaffold(
+      appBar: CustomAppBar(
+        title: '',
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
+      body: SafeArea(child: SuccessViewBody()),
     );
   }
 }

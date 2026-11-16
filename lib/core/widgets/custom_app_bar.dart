@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:payment/core/utils/styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key, required this.title});
+  const CustomAppBar({super.key, required this.title, this.onPressed});
 
   final String title;
+  final void Function()? onPressed;
+
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -16,7 +18,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       elevation: 0,
       leading: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
       ),
     );

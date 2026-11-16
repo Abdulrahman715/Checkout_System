@@ -8,7 +8,12 @@ class VisaView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Visa'),
+      appBar: CustomAppBar(
+        title: 'Visa',
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
       body: SafeArea(child: VisaViewBody()),
     );
   }
